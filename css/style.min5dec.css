@@ -6,6 +6,140 @@
     font-style: normal;
 }
 
+
+ .glow {
+            font-size: 2rem;
+            color: white; /* Text color */
+            text-shadow: 0 0 5px green, 0 0 10px green, 0 0 15px green, 0 0 20px green;
+            animation: glowAnimation 1.5s ease-in-out infinite;
+        }
+
+        /* Keyframes for glowing animation */
+        @keyframes glowAnimation {
+            0% {
+                text-shadow: 0 0 5px green, 0 0 10px green, 0 0 15px green, 0 0 20px green;
+                color: white;
+            }
+            50% {
+                text-shadow: 0 0 20px green, 0 0 30px green, 0 0 50px green, 0 0 70px green;
+                color: limegreen;
+            }
+            100% {
+                text-shadow: 0 0 5px green, 0 0 10px green, 0 0 15px green, 0 0 20px green;
+                color: white;
+            }
+        }
+
+  /* Main container */
+        .containe {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 90%;
+            min-width: 600px;
+            flex-wrap: wrap; /* Allows wrapping on smaller screens */
+            gap: 20px; /* Adds space between the gif-wrapper sections */
+        }
+
+        /* GIF wrapper */
+        .gif-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 10px;
+            max-width: 300px;
+            text-align: center;
+        }
+
+        /* GIF styling */
+        .gif {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Text section styling */
+        .text-section {
+            flex: 1;
+            margin-left: 20px;
+            font-size: 1.2rem;
+            color: white;
+            line-height: 1.6;
+        }
+
+        .text-section h2 {
+            font-size: 1.8rem;
+            color: #ff6347; /* Tomato color for the heading */
+        }
+
+        .text-section p {
+            color: white;
+        }
+
+        .text-section .highlight {
+            color: #ff6347;
+            font-weight: bold;
+        }
+
+        /* Hover effect for gifs */
+        .gif-wrapper:hover .gif {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Smooth shadow effect */
+        .container:hover {
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .text-section {
+                margin-left: 0;
+                margin-top: 15px;
+                text-align: center;
+                font-size: 1rem;
+            }
+
+            .text-section h2 {
+                font-size: 1.6rem;
+            }
+
+            .gif-wrapper {
+                margin: 15px 0;
+                max-width: 90%; /* Allow gifs to expand to a larger width */
+                justify-content: center;
+                text-align: center;
+            }
+        }
+
+        /* Small screens (mobile portrait) */
+        @media (max-width: 480px) {
+            .text-section h2 {
+                font-size: 1.4rem;
+            }
+
+            .text-section p {
+                font-size: 0.9rem;
+            }
+        }
+
+
+
+
   .animated-text {
       font-size: 2rem;
       font-weight: bold;
